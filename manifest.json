@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Open in Music.app",
+  "version": "1.0",
+  "description": "Automatically opens Apple Music urls in Music App (macOS Only)",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://music.apple.com/*/album/*",
+        "*://music.apple.com/*/playlist/*",
+        "*://music.apple.com/*/artist/*",
+        "*://music.apple.com/profile/*"
+      ],
+      "js": ["amlinks.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "amlinks@vito.io"
+    }
+  }
+}
